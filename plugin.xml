@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.danielcwilson.plugins.socialauth"
+    version="0.1.0">
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+	<name>Social Authentication Plugin</name>
+	<description>Simple Social Authentication (Twitter/Facebook) for integrated OS accounts</description>
+	<author>Daniel C. Wilson</author>
+	<license>MIT License</license>
+	<js-module src="www/socialAuth.js" name="SocialAuth">
+		<clobbers target="window.socialAuth" />
+	</js-module>
+
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="SocialAuth">
+		    	<param name="ios-package" value="SocialAuthPlugin" />
+		 	</feature>
+		</config-file>
+
+		<header-file src="ios/SocialAuthPlugin.h" />
+		<source-file src="ios/SocialAuthPlugin.m" />
+		<header-file src="ios/libs/NSData+Base64.h" />
+		<source-file src="ios/libs/NSData+Base64.m" />
+		<header-file src="ios/libs/OAuth+Additions.h" />
+		<source-file src="ios/libs/OAuth+Additions.m" />
+		<header-file src="ios/libs/OAuthCore.h" />
+		<source-file src="ios/libs/OAuthCore.m" />
+		<framework src="Accounts.framework" />
+		<framework src="Social.framework" />
+	</platform>
+</plugin>
