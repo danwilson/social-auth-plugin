@@ -16,11 +16,11 @@ cordova plugin add https://github.com/danwilson/social-auth-plugin.git
 If you are not using the CLI, follow the steps in the section [Installing Without the CLI](#nocli)
 
 Once installed, you will need to modify SocialAuthPlugin.m to add your App ID for Facebook and your Consumer Key and Consumer Secret for Twitter:
-`
+```
 #define TW_CONSUMER_KEY              @""
 #define TW_CONSUMER_SECRET           @""
 #define FB_APP_ID                    @""
-`
+```
 This will likely change in the future... once I determine a better way to avoid having to modify the Objective C files.
 
 #JavaScript Usage
