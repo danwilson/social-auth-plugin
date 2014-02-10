@@ -44,7 +44,7 @@ Perform Reverse Auth (to get OAuth tokens needed for logins):
 * `window.socialAuth.performTwitterReverseAuthentication(function success() {}, function error() {}, username)` 
 On success, returns a string with necessary tokens (in OAUth form, like a query string)
 
-#Developer Site Configuration
+#Developer Site Configuration <a name="developer-sites"></a>
 If your app is not working as expected, it is likely due a configuration setting with the corresponding app set up on Facebook or Twitter.
 
 Facebook
