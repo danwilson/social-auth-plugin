@@ -5,8 +5,8 @@ Cordova (PhoneGap) 3.0+ Plugin to authenticate with Facebook/Twitter accounts on
 
 Notes:
 * Prerequisite: A Cordova 3.0+ project for iOS 6+
+* Prerequisite: App(s) are [set up properly](#developer-sites) in the corresponding developer sites
 * This is designed to only work with accounts tied to the OS (set up in Settings).  This does not include fallbacks to use a web-based auth if no accounts are found.
-* Apps are set up properly in the corresponding developer sites [More Info](#developer-sites)
 
 #Installing
 
@@ -30,7 +30,7 @@ This will likely change in the future... once I determine a better way to avoid 
 Login to Facebook:
 * `window.socialAuth.accessFacebook(function success() {}, function error() {})` 
 If permission is granted, returns access token and basic profile info. If not granted, it returns "Error"
-A future feature will allow you to specify the [desired fields](https://developers.facebook.com/docs/graph-api/reference/user/) as a comma-delimited string. 
+
 
 Check if one or more Twitter accounts are available (this is the entry point for the Twitter flow):
 * `window.socialAuth.isTwitterAvailable(function success() {}, function error() {})` 
